@@ -50,10 +50,11 @@
 }
 
 .about-section .image-wrapper {
-    z-index: 2;
+   z-index: 2;
     img {
-        width: 150px;
-        border-radius: 50%;
+        width: 250px;
+        height: 350px;
+        border-radius: 10%;
     }
 }
 
