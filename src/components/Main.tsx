@@ -13,7 +13,7 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><PictureAsPdfOutlinedIcon/></a>
+            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><PictureAsPdfOutlinedIcon/> </a>
             <a href="https://www.linkedin.com/in/prajna-gupta/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>Prajna Gupta</h1>

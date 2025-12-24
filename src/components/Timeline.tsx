@@ -10,56 +10,45 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Work Experience</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="2024 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Rio Tinto, Brisbane, Queensland</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Contributed to the end-to-end development of Rio Tinto’s Life of Mine Optimization platform, delivering features, refactoring legacy components for performance, and ensuring quality through rigorous testing and code reviews
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="2022 - 2024"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Data Scientist</h3>
+            <h4 className="vertical-timeline-element-subtitle">WallBridge Gilbert Aztec, Adelaide, South Australia</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Designed and developed scalable data workflows and machine learning solutions to transform complex datasets into actionable insights.
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
+           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="2022 Nov - 2023 Jan"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Maptek Pty Ltd, Adelaide, South Australia</h4>
             <p>
-              Full-stack Development, API Development, User Experience
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-            <p>
-              Automation, Data Governance, Statistical Analysis
+              Designed and developed a web-based POC  for an on-premise mining application that enables non-IT staff to configure server instances without requiring direct remote access. This approach addressed a key operational challenge by providing a secure, accessible, and cloud-friendly alternative to traditional manual workflows.
+
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

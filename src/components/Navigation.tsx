@@ -8,6 +8,7 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
 import List from '@mui/material/List';
 import ListIcon from '@mui/icons-material/List';
 import ListItem from '@mui/material/ListItem';
@@ -15,9 +16,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import { Alert } from "@mui/material";
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Learning & Growth', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -63,8 +65,16 @@ function Navigation({parentToChild, modeChange}: any) {
       <Divider />
       <List>
         {navItems.map((item) => (
+          console.log(item[0]),
+          item[0] !== "Learning & Growth" && item[1] !== "projects" ? (
+          //console.log(item[0]),
           <ListItem key={item[0]} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
+              <ListItemText primary={item[0]} />
+            </ListItemButton>
+          </ListItem>
+          ) : <ListItem key={item[0]} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => alert('Projects section is under development!')}>
               <ListItemText primary={item[0]} />
             </ListItemButton>
           </ListItem>
@@ -85,21 +95,51 @@ function Navigation({parentToChild, modeChange}: any) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon />        
           </IconButton>
           {mode === 'dark' ? (
             <LightModeIcon onClick={() => modeChange()}/>
           ) : (
             <DarkModeIcon onClick={() => modeChange()}/>
           )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
+          // custom component for color themes which will return a color palette icon, the callback will change the theme color and update the state variable in the parent
+           <ColorLensIcon onClick={() => modeChange()}/>
+            <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />        
+          </IconButton>
+          
+      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+        {navItems.map((item) => (
+          item[0] !== "Learning & Growth" && (item[1] ?? '').toLowerCase() !== "projects" ? (
+            <Button
+              key={item[0]}
+              onClick={() => scrollToSection(item[1])}
+              sx={{ color: '#fff' }}
+            >
+              {item[0]}
+            </Button>
+          ) : (
+            <Button
+              key={item[0]}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                alert('Projects section is under development!');
+              }}
+              sx={{ color: '#fff' }}
+                >
+              {item[0]}
+            </Button>
+          )
+        ))}
+      </Box>
+      </Toolbar>
       </AppBar>
       <nav>
         <Drawer

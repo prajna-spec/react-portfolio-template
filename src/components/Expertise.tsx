@@ -39,21 +39,13 @@ const labelsSecond = [
    "Pytorch",
    "TensorFlow",
    "Data Analysis",
+   "Statistical Modeling",
    "Computer Vision",
    "Machine Learning Algorithms",
    "Deep Learning",
    "Data Pipelines"
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
-];
 
 function Expertise() {
     return (
@@ -76,7 +68,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faDocker} size="3x"/>
                     <h3>Data Engineering, Machine Learning and AI</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <p>Designed and developed scalable data workflows and machine learning solutions to transform complex datasets into actionable insights.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
