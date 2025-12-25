@@ -13,11 +13,7 @@ code {
   font-size: 1rem !important;
 }
 
-.main-container {
-  position: relative;
-  background-color: #0d1116;
 
-}
 
 a {
   text-decoration: none;
@@ -35,7 +31,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
 .navigation-bar {
   justify-content: space-between;
-  background-color: #0d1116;
+  background-color: var(--primary-main);;
 
   button {
     font-size: 1.1rem;
@@ -92,11 +88,13 @@ p, a, h1, h2, h3, h4, h5, label, button {
   justify-content: center;
 }
 
-.light-mode {
-  background-color: #f8f9fa;
+.main-container {
+  background-color: var(--primary-main);
+  color: var(--text-primary);
+  position: relative;
 
   .navigation-bar {
-    background-color: #f8f9fa;
+    background-color:  var(--primary-main);
   }
 
   p, a, h1, h2, h3, h4, h5, label, button {
@@ -113,7 +111,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 
   .about-section {
-    background-image: url("./assets/images/bg-light.png");
+     background-image: url("./assets/images/bg-light.png");
   }
 
   .skills-container svg {

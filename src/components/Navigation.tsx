@@ -16,17 +16,20 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import { Alert } from "@mui/material";
+// Import ColorPickerDialog if it's a separate component
+// Update the path below to the actual location of ColorPickerDialog
+import ColorPickerDialog from "./ColorPickerDialog";
 
 const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Learning & Growth', 'projects'], ['Contact', 'contact']];
 
-function Navigation({parentToChild, modeChange}: any) {
+function Navigation({parentToChild, modeChange, palette, onPaletteChange}: any) {
 
   const {mode} = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [pickerOpen, setPickerOpen] = useState<boolean>(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -102,8 +105,14 @@ function Navigation({parentToChild, modeChange}: any) {
           ) : (
             <DarkModeIcon onClick={() => modeChange()}/>
           )}
-          // custom component for color themes which will return a color palette icon, the callback will change the theme color and update the state variable in the parent
-           <ColorLensIcon onClick={() => modeChange()}/>
+          
+          <ColorLensIcon onClick={() => setPickerOpen(true)} />
+            <ColorPickerDialog
+              open={pickerOpen}
+              onClose={() => setPickerOpen(false)}
+              value={palette}
+              onChange={onPaletteChange}
+            />
             <IconButton
             color="inherit"
             aria-label="open drawer"
