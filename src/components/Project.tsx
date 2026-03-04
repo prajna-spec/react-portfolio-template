@@ -3,17 +3,15 @@ import '../assets/styles/Project.scss';
 
 function Project() {
     return(
-    <div className="projects-container" id="projects">
-        <h1>Interests</h1>
-        <div className="projects-grid">
-          
-        </div>
-        <h1>
-        Projects
-       </h1>
-       <div style = {{color: 'white'}}>
-         Fun ones on the way!
-       </div>
+    <div className="projects-container" id="projects" style = {{color: "white"}}>
+        <h1>Certifications</h1>
+        <ul>
+          <li>Azure Fundamentals (AZ-900)</li>
+          <li>Microsoft Backend-Developer (Coursera)</li>
+          <li>System Design in Cloud (LinkedIn)</li>
+          <li>React Essentials (LinkedIn)</li>
+          <li>C# and .NET Essential Training (LinkedIn)</li>
+        </ul>
     </div>
     );
 }

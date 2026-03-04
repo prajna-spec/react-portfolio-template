@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import ColorLensIcon from '@mui/icons-material/ColorLens';
+
 import List from '@mui/material/List';
 import ListIcon from '@mui/icons-material/List';
 import ListItem from '@mui/material/ListItem';
@@ -16,10 +16,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import { Alert } from "@mui/material";
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Learning & Growth', 'projects'], ['Contact', 'contact']];
+const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Certifications', 'projects'], ['Extracurriculars', 'extracurriculars'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -102,8 +101,7 @@ function Navigation({parentToChild, modeChange}: any) {
           ) : (
             <DarkModeIcon onClick={() => modeChange()}/>
           )}
-          // custom component for color themes which will return a color palette icon, the callback will change the theme color and update the state variable in the parent
-           <ColorLensIcon onClick={() => modeChange()}/>
+          
             <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -116,7 +114,7 @@ function Navigation({parentToChild, modeChange}: any) {
           
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
         {navItems.map((item) => (
-          item[0] !== "Learning & Growth" && (item[1] ?? '').toLowerCase() !== "projects" ? (
+        (
             <Button
               key={item[0]}
               onClick={() => scrollToSection(item[1])}
@@ -124,19 +122,7 @@ function Navigation({parentToChild, modeChange}: any) {
             >
               {item[0]}
             </Button>
-          ) : (
-            <Button
-              key={item[0]}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                alert('Projects section is under development!');
-              }}
-              sx={{ color: '#fff' }}
-                >
-              {item[0]}
-            </Button>
-          )
+          ) 
         ))}
       </Box>
       </Toolbar>

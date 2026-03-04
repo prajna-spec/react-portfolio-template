@@ -5,6 +5,19 @@
     text-align: left;
 }
   
+.projects-container h1 {
+    margin-bottom: 0.5rem;
+}
+
+.projects-container ul {
+    margin-top: 0;
+    padding-left: 1.2rem;
+}
+
+.projects-container li {
+    margin-bottom: 0.25rem;
+}
+  
 .projects-container .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
