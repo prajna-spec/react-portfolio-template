@@ -34,7 +34,7 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
-            <Project/>
+            <Project parentToChild = {{mode}}/>
             <Extracurriculars/>
             <Contact/>
         </FadeIn>

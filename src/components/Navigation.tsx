@@ -18,7 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Certifications', 'projects'], ['Extracurriculars', 'extracurriculars'], ['Contact', 'contact']];
+const navItems = [['Expertise', 'expertise'], ['Work Experience', 'history'], ['Certifications', 'projects'], ['Extracurriculars', 'extracurriculars'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -66,7 +66,6 @@ function Navigation({parentToChild, modeChange}: any) {
         {navItems.map((item) => (
           console.log(item[0]),
           item[0] !== "Learning & Growth" && item[1] !== "projects" ? (
-          //console.log(item[0]),
           <ListItem key={item[0]} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
               <ListItemText primary={item[0]} />

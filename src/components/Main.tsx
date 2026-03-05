@@ -11,13 +11,13 @@ function Main() {
         <div className="image-wrapper">
            <img src={portfolioWebsite} alt="Avatar" />
         </div>
-        <div className="content">
+        <div className="content">ß
           <div className="social_icons">
             <Tooltip title = "Resume">
               <a href="https://docs.google.com/document/d/1biV1kR50C55Z6aj1g-HAo46uSBg8wmxElHIxWrI3QSc/edit?usp=sharing" target="_blank" rel="noreferrer"><ArticleIcon/> </a>
             </Tooltip>
             <Tooltip title = "LinkedIn Profile">
-              <a href="https://www.linkedin.com/in/prajna-gupta/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+              <a href="https://www.linkedin.com/in/prajnagupta" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             </Tooltip>
             
           </div>
@@ -29,8 +29,13 @@ function Main() {
           </p>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><ArticleIcon data-tooltip-content = "My Resume"/></a>
-            <a href="https://www.linkedin.com/in/prajna-gupta/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <Tooltip title = "Resume">
+              <a href="https://docs.google.com/document/d/1biV1kR50C55Z6aj1g-HAo46uSBg8wmxElHIxWrI3QSc/edit?usp=sharing" target="_blank" rel="noreferrer"><ArticleIcon/> </a>
+            </Tooltip>
+            <Tooltip title = "LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/prajna-gupta/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            </Tooltip>
+            
           </div>
         </div>
       </div>

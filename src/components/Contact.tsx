@@ -1,11 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
 // import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
-import TextField from '@mui/material/TextField';
-import { LinkedIn } from '@mui/icons-material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
@@ -59,7 +54,7 @@ function Contact() {
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
           <p><i>Got a project waiting to be realized? Let's collaborate and make it happen! Please reach out here: {' '}</i>
-          <a href="https://www.linkedin.com/in/prajnagupta/" target="_blank" rel="noreferrer"><LinkedInIcon fontSize='medium'/></a>
+          <a href="https://www.linkedin.com/in/prajnagupta" target="_blank" rel="noreferrer"><LinkedInIcon fontSize='medium'/></a>
           </p>
         </div>
       </div>
