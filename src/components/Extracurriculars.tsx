@@ -28,7 +28,7 @@ function Extracurriculars() {
           role: 'Participant',
           duration: '2022',
           link: "https://devpost.com/software/moodify-suajl8",
-          description: 'Created a web app that uses machine learning to analyze user data and provide personalized study recommendations, improving academic performance.',
+          description: "Built a Flutter/Dart mobile app that converts emotion and activity logs into visual insights, enabling users to better understand and manage their mental wellbeing within a 48-hour hackathon.",
         }
       ]
     },
